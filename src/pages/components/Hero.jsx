@@ -5,7 +5,7 @@ import ScrollToExplore from "../../components/ScrollToExplore";
 import { FaGoogleScholar } from "react-icons/fa6";
 import profileImage from '../../assets/image.png';
 
-const Hero = () => {
+const Hero = () => { 
     const handleSmoothScroll = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
