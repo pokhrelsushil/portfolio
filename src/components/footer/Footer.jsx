@@ -39,7 +39,7 @@ const Footer = () => {
                   <span className="text-gray-900">Sushil</span>
                   <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
                     {" "}
-                    Sharma
+                    Pokhrel
                   </span>
                 </h3>
               </Link>
@@ -136,7 +136,7 @@ const Footer = () => {
               <div className="flex items-center justify-center lg:justify-start gap-4">
                 <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-blue-500 flex-shrink-0" />
                 <span className="text-base sm:text-lg text-gray-600">
-                  Pokhara, Nepal
+                  South & East Asia/ North America 
                 </span>
               </div>
               <div className="flex items-center justify-center lg:justify-start gap-4">
@@ -148,15 +148,6 @@ const Footer = () => {
                   className="text-base sm:text-lg text-gray-600 hover:text-blue-500 transition-colors duration-300"
                 >
                   sushil.pokhrel@gmail.com
-                </Link>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start gap-4">
-                <Phone className="w-6 h-6 sm:w-7 sm:h-7 text-blue-500 flex-shrink-0" />
-                <Link
-                  to="tel:98XXXXXXXX"
-                  className="text-base sm:text-lg text-gray-600 hover:text-blue-500 transition-colors duration-300"
-                >
-                  98XXXXXXXX
                 </Link>
               </div>
             </div>

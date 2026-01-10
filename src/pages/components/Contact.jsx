@@ -104,21 +104,6 @@ const Contact = () => {
 
               <div className="flex items-center gap-4 md:gap-6">
                 <div className="p-3 md:p-4 flex-shrink-0">
-                  <Phone className="w-6 h-6 md:w-8 md:h-8 text-blue-600 hover:text-blue-700" />
-                </div>
-                <div>
-                  <p className="md:text-lg md:text-base text-gray-600">Phone</p>
-                  <a
-                    href="tel:98XXXXXXXX"
-                    className="text-lg sm:text-xl text-gray-700 hover:text-blue-500 transition-colors duration-300"
-                  >
-                    98XXXXXXXX
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 md:gap-6">
-                <div className="p-3 md:p-4 flex-shrink-0">
                   <MapPin className="w-6 h-6 md:w-8 md:h-8 text-blue-600 hover:text-blue-700" />
                 </div>
                 <div>
@@ -126,7 +111,7 @@ const Contact = () => {
                     Location
                   </p>
                   <p className="text-lg sm:text-xl text-gray-700">
-                    Pokhara, Nepal
+                    South & East Asia /North America
                   </p>
                 </div>
               </div>
