@@ -31,7 +31,7 @@ const Hero = () => {
               <span className="text-gray-900">Sushil</span>
               <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
                 {" "}
-                Sharma
+                Pokhrel
               </span>
             </h1>
 
