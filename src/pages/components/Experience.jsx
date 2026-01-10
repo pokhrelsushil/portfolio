@@ -27,7 +27,7 @@ const Experience = () => {
       description:
         "Research reinforcement learning and intelligent agents for sequential decision-making.",
       responsibilities: [
-        "Develop and evaluate RL algorithms",
+        "Design and evaluate RL algorithms",
         "Run experiments and analyze results",
         "Collaborate on research projects",
       ],
@@ -117,6 +117,7 @@ const Experience = () => {
                       <span className="text-xl font-semibold text-blue-600">
                         Key Responsibilities:
                       </span>
+
                       {exp.responsibilities.map((responsibility, idx) => (
                         <div key={idx} className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-2.5 h-2.5 bg-blue-400 rounded-full mt-2.5"></div>
