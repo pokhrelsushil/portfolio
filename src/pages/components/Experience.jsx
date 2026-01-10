@@ -11,11 +11,11 @@ const Experience = () => {
       location: "Remote",
       current: true,
       description:
-        "Create technical content on software engineering, programming, and applied machine learning.",
+        "Create technical content on software engineering and applied machine learning.",
       responsibilities: [
-        "Produce tutorials and technical explainers",
-        "Script, edit, and publish videos regularly",
-        "Grow and manage a technical audience",
+        "Produce concise technical tutorials",
+        "Script, edit, and publish videos",
+        "Maintain and grow a technical audience",
       ],
     },
     {
@@ -25,9 +25,9 @@ const Experience = () => {
       location: "New York, USA",
       current: true,
       description:
-        "Research reinforcement learning and intelligent agents for complex sequential decision-making.",
+        "Research reinforcement learning and intelligent agents for sequential decision-making.",
       responsibilities: [
-        "Design and evaluate RL algorithms",
+        "Develop and evaluate RL algorithms",
         "Run experiments and analyze results",
         "Collaborate on research projects",
       ],
@@ -40,7 +40,6 @@ const Experience = () => {
       className="min-h-screen bg-gray-100 py-12 sm:py-16 md:py-20 px-5 sm:px-6 lg:px-8"
     >
       <div className="max-w-6xl mx-auto">
-        {/* Section Title */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-4">
             Experience
@@ -55,7 +54,6 @@ const Experience = () => {
           </h3>
         </div>
 
-        {/* Timeline Container */}
         <div className="relative">
           <div className="absolute left-[18px] sm:left-[26px] md:left-[40px] top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 via-blue-500 to-transparent" />
 
@@ -65,13 +63,10 @@ const Experience = () => {
                 key={index}
                 className="relative flex items-start gap-6 sm:gap-8 md:gap-10 pl-14 sm:pl-16 md:pl-20 lg:pl-24"
               >
-                {/* Timeline Dot */}
                 <div className="absolute left-[18px] sm:left-[26px] md:left-[40px] lg:left-[42px] top-6 -translate-x-1/2 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-blue-500 border-4 border-white shadow-lg shadow-blue-500/50 z-10" />
 
-                {/* Card */}
                 <div className="flex-1">
                   <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-500">
-                    {/* Header */}
                     <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-2">
                       <div className="flex-shrink-0">
                         <img
@@ -97,7 +92,6 @@ const Experience = () => {
                       )}
                     </div>
 
-                    {/* Period + Location */}
                     <div className="flex sm:flex-row gap-8 text-gray-600 font-medium mb-5 md:mb-6">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-5 h-5 md:w-6 md:h-6" />
@@ -113,14 +107,12 @@ const Experience = () => {
                       </div>
                     </div>
 
-                    {/* Description */}
                     {exp.description && (
                       <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                         {exp.description}
                       </p>
                     )}
 
-                    {/* Responsibilities */}
                     <div className="mt-2">
                       <span className="text-xl font-semibold text-blue-600">
                         Key Responsibilities:
@@ -146,4 +138,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
