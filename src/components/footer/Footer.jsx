@@ -110,17 +110,19 @@ const Footer = () => {
           {/* Services - Centered on mobile */}
           <div className="text-center lg:text-left">
             <h4 className="text-xl sm:text-2xl font-semibold text-black mb-6">
-              Services
+              Research -Interests 
             </h4>
             <ul className="space-y-4 inline-block">
               {[
-                "Frontend Development",
-                "Backend Development",
-                "UI/UX Design",
-              ].map((service) => (
-                <li key={service}>
+                "Human–AI Interaction",
+                "Reinforcement Learning & Autonomous Agents",
+                " Robot Learning",
+                "Complex Systems Design",
+                "Material Science and Computing", 
+              ].map((interests) => (
+                <li key={interests}>
                   <span className="text-base sm:text-lg text-gray-600 hover:text-blue-500 transition-colors duration-300 cursor-pointer block">
-                    {service}
+                    {interests}
                   </span>
                 </li>
               ))}
