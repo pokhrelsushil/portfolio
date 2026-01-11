@@ -6,7 +6,7 @@ const Experience = () => {
   const experienceList = [
     {
       title: "CEO",
-      company: "WATAI-Starup",
+      company: "WATAI-Startup",
       period: "2021 - Present",
       location: "Remote",
       current: true,

@@ -10,39 +10,39 @@ import {
 } from "lucide-react";
 // import { Link } from "react-router-dom";
 import { FaGoogleScholar } from "react-icons/fa6";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  //   const [successMessage, setSuccessMessage] = useState("");
-  //   const [errorMessage, setErrorMessage] = useState("");
-  //   const form = useRef();
+    const [successMessage, setSuccessMessage] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+    const form = useRef();
 
-  //   const sendEmail = (e) => {
-  //     e.preventDefault();
+    const sendEmail = (e) => {
+      e.preventDefault();
 
-  //     emailjs
-  //       .sendForm('service_0er77rp', 'template_n118t5c', form.current, {
-  //         publicKey: 'rOjAK0v3HoqH6XcUn',
-  //       })
-  //       .then(
-  //         () => {
-  //           setSuccessMessage("Message sent successfully!");
-  //           setErrorMessage("");
-  //           form.current.reset(); // Reset the form after successful submission
-  //           setTimeout(() => {
-  //             setSuccessMessage("");
-  //           }, 3000);
-  //         },
-  //         (error) => {
-  //           setErrorMessage("Failed to send message. Please try again.");
-  //           setSuccessMessage("");
-  //           console.error("EmailJS Error:", error);
-  //           setTimeout(() => {
-  //             setErrorMessage("");
-  //           }, 3000);
-  //         }
-  //       );
-  //   };
+      emailjs
+        .sendForm('service_wzurt6j', 'template_2gruxj6', form.current, {
+          publicKey: 'WnfWGgHr8M-6mXMkd',
+        })
+        .then(
+          () => {
+            setSuccessMessage("Message sent successfully!");
+            setErrorMessage("");
+            form.current.reset(); // Reset the form after successful submission
+            setTimeout(() => {
+              setSuccessMessage("");
+            }, 3000);
+          },
+          (error) => {
+            setErrorMessage("Failed to send message. Please try again.");
+            setSuccessMessage("");
+            console.error("EmailJS Error:", error);
+            setTimeout(() => {
+              setErrorMessage("");
+            }, 3000);
+          }
+        );
+    };
 
   return (
     <section
@@ -210,12 +210,12 @@ const Contact = () => {
                 <SendIcon className="h-5 w-5" />
                 Send Message
               </button>
-              {/* {successMessage && (
+              {successMessage && (
                 <p className="text-green-400 text-base md:text-lg text-center font-medium">{successMessage}</p>
               )}
               {errorMessage && (
                 <p className="text-red-600 text-base md:text-lg text-center font-medium">{errorMessage}</p>
-              )} */}
+              )}
             </form>
           </div>
         </div>
