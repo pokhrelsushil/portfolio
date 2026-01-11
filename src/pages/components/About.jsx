@@ -43,17 +43,9 @@ const About = () => {
             </div>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-center lg:text-left px-2 sm:px-0">
-              I am a passionate Web Developer with experience in creating{" "}
-              <span className="text-blue-500 font-semibold">
-                responsive and easy-to-use websites
-              </span>
-              . I am skilled in{" "}
-              <span className="text-blue-500 font-semibold">
-                Python, C, C++, HTML, CSS, and JavaScript
-              </span>
-              . I have worked with teams to build fast and scalable web
-              solutions. I am excited to use my technical skills and creativity
-              in a dynamic development team.
+              Interdisciplinary researcher with roots in Material SCIENCE & Computing, Chemical Engineering, Electrical Engineering
+              , Robotics, Biomedical Engineering, and Machine Learning. I’m passionate about bridging these fields to innovate 
+              and solve real-world challenges. Follow me for insights, research updates, and interdisciplinary ideas and collaborations.
             </p>
 
             {/* Contact Details (commented out in your code – uncomment if needed) */}

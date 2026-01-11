@@ -44,7 +44,7 @@ const Footer = () => {
                 </h3>
               </Link>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-sm mx-auto lg:mx-0 mt-2">
-                Interdisciplinary researcher with roots in Material SCIENCE & Computing, Chemical Engineering, Electrical Engineering, Robotics, Biomedical Engineering, and Machine Learning. I’m passionate about bridging these fields to innovate and solve real-world challenges. Follow me for insights, research updates, and interdisciplinary ideas and collaborations 
+                Interdisciplinary researcher in materials science, engineering, robotics, and machine learning.
               </p>
             </div>
 

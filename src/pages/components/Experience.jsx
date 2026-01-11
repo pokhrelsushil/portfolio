@@ -5,18 +5,13 @@ import icon from "../../assets/logo.png";
 const Experience = () => {
   const experienceList = [
     {
-      title: "Content Creator",
-      company: "YouTube",
+      title: "CEO",
+      company: "WATAI-Starup",
       period: "2021 - Present",
       location: "Remote",
       current: true,
       description:
         "Create technical content on software engineering and applied machine learning.",
-      responsibilities: [
-        "Produce concise technical tutorials",
-        "Script, edit, and publish videos",
-        "Maintain and grow a technical audience",
-      ],
     },
     {
       title: "Machine Learning Researcher (Reinforcement Learning)",
