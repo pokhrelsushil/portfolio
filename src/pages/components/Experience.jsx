@@ -11,7 +11,7 @@ const Experience = () => {
       location: "Remote",
       current: true,
       description:
-        "Create technical content on software engineering and applied machine learning.",
+        "Create technical content on emerging technologies and applied machine learning.",
         responsibilities: [
         "Design and evaluate RL algorithms",
         "Run experiments and analyze results",
