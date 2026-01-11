@@ -169,7 +169,7 @@ const Contact = () => {
               Send Me a Message
             </h3>
 
-            <form className="space-y-5 md:space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-5 md:space-y-6">
               <input
                 type="text"
                 name="user_name"
