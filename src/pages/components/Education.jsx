@@ -8,8 +8,7 @@ const educationList = [
     location: "Waterloo, Ontario, Canada",
     period: "Present",
     description:
-      description:
-  "PhD Research Areas: Human–AI interaction (HCI) and human factors in the design of principled intelligent agents for complex, sequential decision-making. Core foundations include control theory, optimization, formal methods, and machine learning for safety-critical and high-assurance systems. Research spans autonomous systems, cyber–physical systems, multi-robot systems, and intelligent transportation systems. Interdisciplinary directions draw on robotics, game-theoretic and strategic decision-making frameworks, and integrative approaches to intelligence inspired by scientific-AI paradigms. Additional interests include biomedical engineering (BME), cryptography-aware and privacy-preserving intelligent systems, and physics-informed approaches to scientific and materials-oriented computation. Emphasis is placed on safety, robustness, interpretability, and trustworthy deployment in real-world socio-technical systems.",
+      "PhD Research Areas: Design of principled AI agents and human–AI collaboration for complex, sequential decision-making. Core methods include reinforcement learning, interpretable and adaptive interactive AI, value elicitation and alignment, and foundation models for high-stakes systems. Research spans robotics, cyber–physical systems, biomedical engineering (BME), and secure intelligent systems (including cryptographic and privacy-aware computation). Interdisciplinary directions include physics-informed and materials-aware AI for scientific discovery. Application domains include safety-critical autonomy (e.g., autonomous vehicles), small modular reactors, and large-scale socio-technical systems, with emphasis on safety, robustness, and trustworthy deployment.",
   },
   {
     degree: "MS: Biomedical Engineering (BME)",
