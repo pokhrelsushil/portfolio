@@ -42,8 +42,8 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Passionate about leveraging technology to solve real-world
-              problems and create impactful digital experiences.
+              Interdisciplinary researcher passionate about leveraging technology to solve real-world
+              problems.
             </p>
 
             {/* Action Buttons */}
