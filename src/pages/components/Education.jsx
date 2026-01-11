@@ -12,9 +12,8 @@ const educationList = [
   },
   {
     degree: "MS: Biomedical Engineering (BME)",
-    institution: "State University of New York (SUNY)",
+    institution: "State University of New York (SUNY),Binghamton University(BU)",
     location: "Vestal, New York, USA",
-    period: "Completed",
     description:
       "Master’s training in biomedical engineering with emphasis on computational methods for healthcare. Focus areas included biomedical signal processing, medical imaging, machine learning for health data, and modeling of biological systems, alongside foundations for health-oriented cyber–physical systems. Developed interdisciplinary expertise at the interface of engineering, computation, and medicine, with attention to translational impact and responsible use in clinical contexts.",
   },
