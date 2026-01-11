@@ -116,8 +116,8 @@ const Footer = () => {
               {[
                 "Human–AI Interaction",
                 "Reinforcement Learning & Autonomous Agents",
-                " Robot Learning",
-                "Complex Systems Design",
+                " Robot Learning/Control Theory ",
+                "Complex Systems Design/CPS",
                 "Material Science and Computing", 
               ].map((interests) => (
                 <li key={interests}>
