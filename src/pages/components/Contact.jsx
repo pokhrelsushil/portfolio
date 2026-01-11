@@ -110,7 +110,7 @@ const Contact = () => {
                     Location
                   </p>
                   <p className="text-lg sm:text-xl text-gray-700">
-                    South & East Asia /North America
+                    South-East Asia /North America
                   </p>
                 </div>
               </div>
