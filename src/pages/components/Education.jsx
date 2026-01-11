@@ -8,8 +8,9 @@ const educationList = [
     location: "Waterloo, Ontario, Canada",
     period: "Present",
     description:
-    Thesis : Adaptive automation in SMR control room via Physics induced MARL 
-      " Research Areas: Design of principled AI agents and human–AI collaboration for complex, sequential decision-making. Core methods include reinforcement learning, interpretable and adaptive interactive AI, value elicitation and alignment, and foundation models for high-stakes systems. Research spans robotics, cyber–physical systems, biomedical engineering (BME), and secure intelligent systems (including cryptographic and privacy-aware computation). Interdisciplinary directions include physics-informed and materials-aware AI for scientific discovery. Application domains include safety-critical autonomy (e.g., autonomous vehicles), small modular reactors, and large-scale socio-technical systems, with emphasis on safety, robustness, and trustworthy deployment.",
+      " Research Areas: 
+      "Thesis : Adaptive automation in SMR control room via Physics induced MARL 
+      Design of principled AI agents and human–AI collaboration for complex, sequential decision-making. Core methods include reinforcement learning, interpretable and adaptive interactive AI, value elicitation and alignment, and foundation models for high-stakes systems. Research spans robotics, cyber–physical systems, biomedical engineering (BME), and secure intelligent systems (including cryptographic and privacy-aware computation). Interdisciplinary directions include physics-informed and materials-aware AI for scientific discovery. Application domains include safety-critical autonomy (e.g., autonomous vehicles), small modular reactors, and large-scale socio-technical systems, with emphasis on safety, robustness, and trustworthy deployment.",
   },
   {
     degree: "MS: Biomedical Engineering (BME)",
