@@ -31,44 +31,45 @@ const Resources = () => {
         "Best ML book I have read in a while ",
     },
     {
-      title: "Design Principles for Developers",
+      title: "RL fundamentals ",
       date: "June 29, 2025",
-      category: "UI/UX Design",
+      category: "",
       featured: false,
       image: resourceImage,
-      url: "#",
+      url: "http://incompleteideas.net/book/RLbook2018.pdf",
       description:
-        "Gained foundational knowledge in design principles and user experience concepts.",
+        "Reading this book and resources on RL .",
     },
     {
-      title: "HTML & CSS Fundamentals",
+      title: "A practical Guide to building gents  ",
       date: "October 3, 2025",
-      category: "Web Development",
+      category: "LLM ",
       featured: false,
       image: resourceImage,
-      url: "#",
+      url: "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf",
       description:
-        "Completed basic training in web development focusing on HTML and CSS technologies.",
+        "AI agent from alpha to omega",
     },
     {
-      title: "How to Articles in Google Scholar",
-      date: "September 1, 2024",
+      title: "World Models in Artificial Intelligence: Sensing, Learning,
+and Reasoning Like a Child",
+      date: "19 March , 2025",
       category: "Research",
       featured: true,
       image: resourceImage,
-      url: "#",
+      url: "https://arxiv.org/pdf/2503.15168",
       description:
-        "Learned how to effectively search and utilize articles in Google Scholar for academic research.",
+        "Can Modern AI Systems reason? Are we already there?",
     },
     {
-      title: "C Programming Basics",
-      date: "April 24, 2025",
-      category: "Programming",
+      title: "Best AI and LLM Engineering Resources",
+      date: "2026 January , 2026",
+      category: "AI/ML",
       featured: true,
       image: resourceImage,
-      url: "#",
+      url: "https://github.com/javabuddy/best-ai-and-llm-engineering-resource",
       description:
-        "Completed foundational courses in C programming language covering syntax and basic programming concepts.",
+        "10 must-read AI and LLM engineering books for developers",
     },
     {
       title: "C # Fundamentals",
@@ -78,7 +79,7 @@ const Resources = () => {
       image: resourceImage,
       url: "#",
       description:
-        "Completed introductory courses in C# programming language and .NET framework basics.",
+        " introductory courses in C# programming language and .NET framework basics.",
     },
     {
       title: "c++ Programming Basics  ",
@@ -88,7 +89,7 @@ const Resources = () => {
       image: resourceImage,
       url: "#",
       description:
-        "Learned the fundamentals of C++ programming including syntax, data types, and control structures.",
+        "fundamentals of C++ programming including syntax, data types, and control structures.",
     },
     {
       title: "Introduction of Computer Science",
