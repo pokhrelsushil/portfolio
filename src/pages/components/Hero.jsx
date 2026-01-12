@@ -37,6 +37,10 @@ const Hero = () => {
           {/* Left - Text Content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6 md:space-y-8">
             {/* Greeting */}
+            <div className="inline-flex items-center justify-center gap-3 text-blue-600 text-4xl sm:text-5xl font-bold">
+              <span>👋</span>
+              <span>Hi, I'm</span>
+            </div>
 
             {/* Main Name */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
