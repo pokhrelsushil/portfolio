@@ -138,7 +138,7 @@ const Footer = () => {
               <div className="flex items-center justify-center lg:justify-start gap-4">
                 <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-blue-500 flex-shrink-0" />
                 <span className="text-base sm:text-lg text-gray-600">
-                  South & East Asia/ North America 
+                  South-East Asia/ North-America 
                 </span>
               </div>
               <div className="flex items-center justify-center lg:justify-start gap-4">

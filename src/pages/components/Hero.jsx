@@ -23,9 +23,6 @@ const Hero = () => {
             {/* Greeting */}
             <div className="inline-flex items-center justify-center gap-3 text-blue-600 text-4xl sm:text-5xl font-bold">
               <span>👋</span>
-              <span>Hi, I'm</span>
-            </div>
-
             {/* Main Name */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
               <span className="text-gray-900">Sushil</span>
@@ -42,8 +39,7 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Interdisciplinary researcher passionate about leveraging technology to solve real-world
-              problems.
+              Interdisciplinary researcher grounded in scientific and engineering principles, focused on solving real-world problems.
             </p>
 
             {/* Action Buttons */}
