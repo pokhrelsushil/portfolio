@@ -39,12 +39,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto w-full mb-20 md:mb-24">
         <div className="flex flex-col lg:flex-row items-center gap-10 xl:gap-16">
           {/* Left - Text Content */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6 md:space-y-8">
-            {/* Optional emoji only */}
-            <div className="text-blue-600 text-4xl sm:text-5xl font-bold">
-              <span>👋</span>
-            </div>
-
+          <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6 md:space-y-8"> 
             {/* Name */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
               <span className="text-gray-900">Sushil</span>
