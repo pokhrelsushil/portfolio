@@ -97,8 +97,6 @@ const Contact = () => {
                     className="text-lg sm:text-xl text-gray-700 hover:text-blue-500 transition-colors duration-300"
                   >
                     sushil.pokhrel@gmail.com
-                    sushilpokhrel@binghamton.edu
-                    sushil.pokhrel@uwaterloo.ca
 
                   </a>
                 </div>
