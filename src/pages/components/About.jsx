@@ -1,135 +1,201 @@
 import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
-// import { Link } from "react-router-dom";
 import { Tweet } from "react-tweet";
-import XTimeline from "../../components/XTimeline";
 import profileImage from '../../assets/sushilpokhrel1.png';
 
 const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen bg-gray-50/80 py-12 px-4 sm:px-6 md:px-8 lg:py-20"
+      className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
             About
-          </h2>
-          <div className="w-28 md:w-32 h-1 bg-blue-400 mx-auto rounded-full"></div>
+          </h1>
+          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
-        {/* Main Content – 75% left / 25% right on lg+ */}
-        <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8 lg:gap-20 items-start">
-          {/* Left – About Me (75%) */}
-          <div className="order-2 lg:order-1 space-y-8 lg:space-y-10">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center lg:text-left">
-              About Me
-            </h2>
-             
-            <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg">
-              {/* Glow Effect */}
-              <div className="absolute inset-0 rounded-3xl bg-blue-400 opacity-30 blur-3xl -z-10 animate-pulse"></div>
-
-              {/* Image Container */}
-              <div className="rounded-2xl overflow-hidden border-4 md:border-8 border-blue-400 shadow-xl flex items-center justify-center">
-                <img
-                  src={profileImage}
-                  alt="Sushil Pokhrel"
-                  className="w-full h-auto object-cover aspect-square sm:aspect-[4/5] lg:aspect-auto max-w-full max-h-full"
-                />
-              </div>
-            </div>
-
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-center lg:text-left px-2 sm:px-0">
-              Interdisciplinary researcher with roots in Material SCIENCE & Computing, Chemical Engineering, Electrical Engineering
-              , Robotics, Biomedical Engineering, and Machine Learning. I’m passionate about bridging these fields to innovate 
-              and solve real-world challenges. Follow me for insights, research updates, and interdisciplinary ideas and collaborations.
-            </p>
-             <div className="space-y-6 md:space-y-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-            Research Interests:
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 font-semibold text-base sm:text-lg md:text-xl text-gray-800">
-            <li>Human–AI Interaction</li>
-            <li>Reinforcement Learning & Autonomous Agents</li>
-            <li>Robot Learning/Control Theory</li>
-            <li>Complex Systems Design/Cyber Physical System</li>
-            <li>Material Science(Physics, chemistry , biology) and Computing</li>
-          </ul>
-          <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-            To obtain a comprehensive understanding of my research background, professional experience, and projects, 
-            and to collaborate please contact me and specify your area of interest.
-          </p>
-          <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-            Beyond my scholarly and professional engagements, I nurture a sustained devotion to reading. 
-            Books, for me, are not merely sources of information but enduring companions in reflection, 
-            inquiry, and intellectual enrichment. Through literature, I continually expand my perspectives and 
-            deepen my understanding of the world’s complexity. 
-            Reading thus serves as both a disciplined pursuit of knowledge and a contemplative reprieve from routine. 
-            A curated selection of my preferred works is available in the other section. 
-            I also engage regularly with intellectually rigorous podcasts that further complement my learning.
-          </p>
-        </div>
-          </div>
-
-          {/* Right – Latest from X (25%) */}
-          <div className="order-1 lg:order-2 flex flex-col items-center lg:items-start">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">
-              Latest from X
-            </h3>
-
-            {/* Scrollable Twitter Feed Container */}
-            <div
-              className="
-                relative w-full 
-                max-w-[300px] 
-                h-[450px] sm:h-[550px] md:h-[650px] lg:h-[630px]
-                overflow-y-auto 
-                bg-gray-900 rounded-2xl 
-                shadow-2xl shadow-blue-500/20 
-                border border-gray-700
-                scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-gray-800
-                scrollbar-thumb-rounded-full scrollbar-track-rounded-full
-                lg:scrollbar-w-2 scrollbar-w-1
-              "
-            >
-              <div className="p-5 sm:p-6 space-y-6 md:space-y-8">
-                <Tweet id="2010741574364479825" />
-                <Tweet id="2006420126438994042" />
-                <Tweet id="2006857672063123924" />
-                <Tweet id="1984297576665854457" />
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          
+          {/* Left Column - Main Content (75%) */}
+          <div className="lg:col-span-9 space-y-12">
+            
+            {/* Profile Section */}
+            <div className="space-y-8">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-gray-200 pb-3">
+                About Me
+              </h2>
+              
+              {/* Profile Image */}
+              <div className="flex justify-center lg:justify-start">
+                <div className="relative w-full max-w-sm">
+                  <div className="absolute inset-0 bg-blue-600 opacity-10 blur-2xl rounded-2xl"></div>
+                  <div className="relative rounded-xl overflow-hidden border-2 border-gray-200 shadow-xl">
+                    <img
+                      src={profileImage}
+                      alt="Sushil Pokhrel - Researcher"
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </div>
               </div>
 
-              {/* <a class="twitter-timeline" data-lang="en" data-theme="dark" 
-              href="https://twitter.com/sushilpokhrel?ref_src=twsrc%5Etfw"
-              data-width="50" data-height="100"
-              data-chrome="nofooter noborders"
-              data-tweet-limit="10"
-              data-aria-polite="assertive"
-              >Tweets by sushilpokhrel</a> 
-              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}
-               
-              {/* <div className="flex justify-center">
-        <XTimeline />
-      </div> */}
-
+              {/* Bio */}
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Interdisciplinary researcher specializing in the convergence of materials science, computing, 
+                chemical engineering, electrical engineering, robotics, biomedical engineering, and machine learning. 
+                My research focuses on bridging theoretical foundations with practical applications to address 
+                complex real-world challenges through innovative, cross-disciplinary approaches.
+              </p>
             </div>
-            <p className="mt-6 text-sm text-gray-500 text-center lg:text-left">
-              Want to see more?{" "}
-              <a
-                href="https://x.com/sushilpokhrel"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline font-medium"
-              >
-                Follow me on X →
-              </a>
-            </p>
+
+            {/* Research Interests */}
+            <div className="space-y-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-gray-200 pb-3">
+                Research Interests
+              </h2>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-lg">Human–AI Interaction</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-lg">Reinforcement Learning & Autonomous Agents</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-lg">Robot Learning & Control Theory</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-lg">Complex Systems Design & Cyber-Physical Systems</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-lg">Materials Science (Physics, Chemistry, Biology) & Computing</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Collaboration */}
+            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                For comprehensive details regarding my research background, professional experience, and project 
+                portfolio, or to discuss potential collaborations, please contact me directly with your specific 
+                area of interest.
+              </p>
+            </div>
+
+            {/* Personal Interests */}
+            <div className="space-y-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 border-b-2 border-gray-200 pb-3">
+                Beyond Research
+              </h2>
+              <div className="prose prose-lg max-w-none text-gray-700">
+                <p className="leading-relaxed mb-4">
+                  Beyond my scholarly and professional pursuits, I maintain a deep commitment to reading as 
+                  a foundational practice of intellectual development. Literature serves not merely as a source 
+                  of information but as a catalyst for sustained reflection, critical inquiry, and the continual 
+                  expansion of perspective.
+                </p>
+                <p className="leading-relaxed">
+                  Through deliberate engagement with diverse texts, I cultivate a nuanced understanding of 
+                  complex systems, human behavior, and interdisciplinary knowledge. This practice of reading 
+                  represents both a disciplined pursuit of wisdom and a contemplative space for synthesis and 
+                  innovation. A curated selection of influential works is available in the recommended reading 
+                  section. Additionally, I regularly engage with intellectually rigorous podcasts that complement 
+                  and enhance my ongoing learning.
+                </p>
+              </div>
+            </div>
           </div>
+
+          {/* Right Column - Twitter Feed (25%) */}
+          <aside className="lg:col-span-3">
+            <div className="lg:sticky lg:top-8 space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Latest Updates
+              </h3>
+              
+              {/* Twitter Feed Container */}
+              <div className="relative">
+                <div
+                  className="
+                    w-full 
+                    max-h-[700px]
+                    overflow-y-auto 
+                    bg-white
+                    rounded-lg 
+                    shadow-lg
+                    border border-gray-200
+                    scrollbar-thin 
+                    scrollbar-thumb-gray-400 
+                    scrollbar-track-gray-100
+                  "
+                  style={{
+                    scrollbarWidth: 'thin',
+                  }}
+                >
+                  <div className="p-4 space-y-6">
+                    <Tweet id="2010741574364479825" />
+                    <Tweet id="2006420126438994042" />
+                    <Tweet id="2006857672063123924" />
+                    <Tweet id="1984297576665854457" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Follow Link */}
+              <div className="text-center lg:text-left">
+                <a
+                  href="https://x.com/sushilpokhrel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
+                >
+                  Follow on X
+                  <svg 
+                    className="w-4 h-4 ml-2" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M14 5l7 7m0 0l-7 7m7-7H3" 
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
+
+      {/* Custom Scrollbar Styles */}
+      <style jsx>{`
+        .scrollbar-thin::-webkit-scrollbar {
+          width: 6px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-track {
+          background: #f3f4f6;
+          border-radius: 10px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+          background: #9ca3af;
+          border-radius: 10px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+          background: #6b7280;
+        }
+      `}</style>
     </section>
   );
 };
