@@ -1,58 +1,71 @@
 import React, { useEffect, useState } from "react";
-import { href, Link } from "react-router-dom";
+import { href, Link, useLocation } from "react-router-dom";
 import { Github, Linkedin, Mail, Menu, Twitter, X, } from "lucide-react";
 import { FaGoogleScholar } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+const location = useLocation(); // ← Get current URL/path
 
   const navLinks = [
-    { name: "Home", path: "#home", id: "home" },
-    { name: "About", path: "#about", id: "about" },
-    { name: "Experience", path: "#experience", id: "experience" },
-    { name: "Education", path: "#education", id: "education" },
-    // { name: "Achievements", path: "#achievements", id: "achievements" },
-    { name: "Resources", path: "#resources", id: "resources" },
-    { name: "Contact", path: "#contact", id: "contact" },
+    { name: "Home", path: "/", id: "home" },
+    { name: "About", path: "/about", id: "about" },
+    { name: "Experience", path: "/experience", id: "experience" },
+    { name: "Education", path: "/education", id: "education" },
+    { name: "Resources", path: "/resources", id: "resources" },
+    { name: "News", path: "/news", id: "news" },
+    { name: "Contact", path: "/contact", id: "contact" },
   ];
 
-    // Track scroll position and update active section
+  // Sync active state with current route (main fix)
   useEffect(() => {
-    const sections = navLinks
-      .filter((link) => link.id)
-      .map((link) => document.getElementById(link.id))
-      .filter(Boolean);
+    const currentPath = location.pathname;
 
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100; // offset for navbar height
+    // Find matching link by path
+    const matchedLink = navLinks.find(link => link.path === currentPath);
 
-      let current = "home";
+    if (matchedLink) {
+      setActiveSection(matchedLink.id);
+    } else {
+      // Fallback to scroll-based for hash/anchor navigation
+      updateActiveFromScroll();
+    }
+  }, [location.pathname]);
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
+  // Scroll-based active (runs on mount + scroll)
+  const updateActiveFromScroll = () => {
+    const scrollPosition = window.scrollY + 100; // offset for navbar
+
+    let current = "home";
+
+    navLinks.forEach(link => {
+      if (link.id) {
+        const section = document.getElementById(link.id);
         if (section && scrollPosition >= section.offsetTop) {
-          current = section.id;
-          break;
+          current = link.id;
         }
       }
+    });
 
-      setActiveSection(current);
-    };
+    setActiveSection(current);
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+  useEffect(() => {
+    window.addEventListener("scroll", updateActiveFromScroll);
+    updateActiveFromScroll(); // initial check
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", updateActiveFromScroll);
   }, []);
 
-    const handleLinkClick = (path = false) => {
+  const handleLinkClick = (path) => {
     setIsMobileMenuOpen(false);
 
+    // If hash link (anchor), smooth scroll
     if (path.startsWith("#")) {
       const element = document.querySelector(path);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
   };

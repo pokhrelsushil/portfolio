@@ -42,16 +42,16 @@ const Hero = () => {
           <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6 md:space-y-8"> 
             {/* Name */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
-              <span className="text-gray-900">Sushil</span>
-              <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+              <span className="text-gray-900">Sushil Pokhrel </span>
+              {/* <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
                 {" "}
                 Pokhrel
-              </span>
+              </span> */}
             </h1>
 
             {/* Title */}
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700">
-              Systems Design / Machine Learning Researcher
+              Systems Design || Machine Learning Researcher
             </h2>
 
             {/* Description */}
@@ -164,8 +164,6 @@ const Hero = () => {
               />
             </div>
           </div>
-
-          <ScrollToExplore />
         </div>
       </div>
     </section>

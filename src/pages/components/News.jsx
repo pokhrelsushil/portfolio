@@ -1,11 +1,27 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import React, { useState } from 'react';
 
-const Resources = () => {
+const News = () => {
         const [currentPage, setCurrentPage] = useState(1);
-        const itemsPerPage = 5;
+        const itemsPerPage = 4;
 
-     const resources = [
+      const readingList = [
+            {
+                  title:
+                        "Artificial Intelligence: A Modern Approach by Stuart Russell and Peter Norvig",
+            },
+            {
+                  title: "Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville",
+            },
+            {
+                  title: "Pattern Recognition and Machine Learning by Christopher M. Bishop",
+            },
+            {
+                  title: "Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto",
+            },
+      ];
+
+     const newsList = [
        {
          date: "11/2025",
          description:
@@ -38,9 +54,9 @@ const Resources = () => {
        },
      ];
 
-  // Pagination
-  const totalPages = Math.ceil(resources.length / itemsPerPage);
-  const paginatedResources = resources.slice(
+       // Pagination
+  const totalPages = Math.ceil(newsList.length / itemsPerPage);
+  const paginatednews = newsList.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -56,16 +72,55 @@ const Resources = () => {
       className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-4xl mx-auto space-y-12 md:space-y-16">
-        {/* Resources Section */}
         <div className="space-y-6 md:space-y-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-            Resources
+            Research Interests:
           </h2>
-         {paginatedResources.map((resource, index) => (
+          <ul className="list-disc pl-6 space-y-2 font-semibold text-base sm:text-lg md:text-xl text-gray-800">
+            <li>Human–AI Interaction</li>
+            <li>Reinforcement Learning & Autonomous Agents</li>
+            <li>Robot Learning/Control Theory</li>
+            <li>Complex Systems Design/Cyber Physical System</li>
+            <li>Material Science(Physics, chemistry , biology) and Computing</li>
+          </ul>
+          <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
+            To get a comprehensive understanding of my Research and Work experiences, as well as
+            my Projects, please take a look at my detailed description.
+          </p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
+            Besides my professional pursuits, I have a deep passion for reading. I consider myself a true
+            bookworm and find joy in immersing myself in books, expanding my knowledge, and exploring
+            different worlds through literature. Reading is not only a hobby for me, but also a way to relax,
+            learn, and broaden my perspective. You can view some of my favorite books in the Misc. tab.
+            In addition to books, I also enjoy listening to podcasts.
+          </p>
+        </div>
+
+
+      {/* Reading List */}
+        <div className="space-y-6 md:space-y-5">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
+            Reading List
+          </h2>
+         {readingList.map((read, index) => (
+          <ul key={index} className="list-disc pl-6 space-y-4 text-base font-semibold sm:text-lg md:text-xl text-gray-800">
+            <li>
+                  {read.title} <a href="#"  target="_blank" rel="noopener noreferrer"  className="font-semibold underline text-blue-500">Read </a>
+            </li>
+          </ul>
+      ))}
+        </div>
+
+        {/* News Section */}
+        <div className="space-y-6 md:space-y-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
+            News
+          </h2>
+         {paginatednews.map((news, index) => (
           <ul key={index} className="list-disc pl-6 space-y-1 text-base sm:text-lg md:text-xl text-gray-800">
             <li>
-              <span className="font-semibold">[{resource.date}] </span>
-                  {resource.description} <a href="#"  target="_blank" rel="noopener noreferrer"  className="font-semibold underline text-blue-500">Read More </a>
+              <span className="font-semibold">[{news.date}] </span>
+                  {news.description} <a href="#"  target="_blank" rel="noopener noreferrer"  className="font-semibold underline text-blue-500">Read More </a>
             </li>
           </ul>
       ))}
@@ -123,4 +178,4 @@ const Resources = () => {
   );
 };
 
-export default Resources
+export default News;
