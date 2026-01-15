@@ -72,31 +72,7 @@ const News = () => {
       className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-4xl mx-auto space-y-12 md:space-y-16">
-        <div className="space-y-6 md:space-y-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-            Research Interests:
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 font-semibold text-base sm:text-lg md:text-xl text-gray-800">
-            <li>Human–AI Interaction</li>
-            <li>Reinforcement Learning & Autonomous Agents</li>
-            <li>Robot Learning/Control Theory</li>
-            <li>Complex Systems Design/Cyber Physical System</li>
-            <li>Material Science(Physics, chemistry , biology) and Computing</li>
-          </ul>
-          <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-            To get a comprehensive understanding of my Research and Work experiences, as well as
-            my Projects, please take a look at my detailed description.
-          </p>
-          <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-            Besides my professional pursuits, I have a deep passion for reading. I consider myself a true
-            bookworm and find joy in immersing myself in books, expanding my knowledge, and exploring
-            different worlds through literature. Reading is not only a hobby for me, but also a way to relax,
-            learn, and broaden my perspective. You can view some of my favorite books in the Misc. tab.
-            In addition to books, I also enjoy listening to podcasts.
-          </p>
-        </div>
-
-
+    
       {/* Reading List */}
         <div className="space-y-6 md:space-y-5">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">

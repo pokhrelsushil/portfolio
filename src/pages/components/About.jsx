@@ -47,9 +47,29 @@ const About = () => {
               , Robotics, Biomedical Engineering, and Machine Learning. I’m passionate about bridging these fields to innovate 
               and solve real-world challenges. Follow me for insights, research updates, and interdisciplinary ideas and collaborations.
             </p>
-
-            {/* Contact Details (commented out in your code – uncomment if needed) */}
-            {/* ... your contact block here ... */}
+             <div className="space-y-6 md:space-y-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
+            Research Interests:
+          </h2>
+          <ul className="list-disc pl-6 space-y-2 font-semibold text-base sm:text-lg md:text-xl text-gray-800">
+            <li>Human–AI Interaction</li>
+            <li>Reinforcement Learning & Autonomous Agents</li>
+            <li>Robot Learning/Control Theory</li>
+            <li>Complex Systems Design/Cyber Physical System</li>
+            <li>Material Science(Physics, chemistry , biology) and Computing</li>
+          </ul>
+          <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
+            To get a comprehensive understanding of my Research and Work experiences, as well as
+            my Projects, please take a look at my detailed description.
+          </p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
+            Besides my professional pursuits, I have a deep passion for reading. I consider myself a true
+            bookworm and find joy in immersing myself in books, expanding my knowledge, and exploring
+            different worlds through literature. Reading is not only a hobby for me, but also a way to relax,
+            learn, and broaden my perspective. You can view some of my favorite books in the Misc. tab.
+            In addition to books, I also enjoy listening to podcasts.
+          </p>
+        </div>
           </div>
 
           {/* Right – Latest from X (25%) */}
@@ -74,6 +94,7 @@ const About = () => {
               "
             >
               <div className="p-5 sm:p-6 space-y-6 md:space-y-8">
+                <Tweet id="2010741574364479825" />
                 <Tweet id="2006420126438994042" />
                 <Tweet id="2006857672063123924" />
                 <Tweet id="1984297576665854457" />
