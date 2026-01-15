@@ -5,6 +5,23 @@ const Resources = () => {
         const [currentPage, setCurrentPage] = useState(1);
         const itemsPerPage = 5;
 
+         const readingList = [
+            {
+                  title:
+                        "Artificial Intelligence: A Modern Approach by Stuart Russell and Peter Norvig",
+            },
+            {
+                  title: "Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville",
+            },
+            {
+                  title: "Pattern Recognition and Machine Learning by Christopher M. Bishop",
+            },
+            {
+                  title: "Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto",
+            },
+      ];
+
+
      const resources = [
        {
          date: "11/2025",
@@ -56,6 +73,20 @@ const Resources = () => {
       className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-4xl mx-auto space-y-12 md:space-y-16">
+        {/* Reading List */}
+        <div className="space-y-6 md:space-y-5">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
+            Reading List
+          </h2>
+         {readingList.map((read, index) => (
+          <ul key={index} className="list-disc pl-6 space-y-4 text-base font-semibold sm:text-lg md:text-xl text-gray-800">
+            <li>
+                  {read.title} <a href="#"  target="_blank" rel="noopener noreferrer"  className="font-semibold underline text-blue-500">Read </a>
+            </li>
+          </ul>
+      ))}
+        </div>
+        
         {/* Resources Section */}
         <div className="space-y-6 md:space-y-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
