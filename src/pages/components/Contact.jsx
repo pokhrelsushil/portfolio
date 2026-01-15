@@ -97,6 +97,9 @@ const Contact = () => {
                     className="text-lg sm:text-xl text-gray-700 hover:text-blue-500 transition-colors duration-300"
                   >
                     sushil.pokhrel@gmail.com
+                    sushilpokhrel@binghamton.edu
+                    sushil.pokhrel@uwaterloo.ca
+
                   </a>
                 </div>
               </div>
@@ -110,7 +113,7 @@ const Contact = () => {
                     Location
                   </p>
                   <p className="text-lg sm:text-xl text-gray-700">
-                    South-East Asia /North America
+                    South-East Asia | North-America
                   </p>
                 </div>
               </div>
