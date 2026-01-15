@@ -59,15 +59,17 @@ const About = () => {
             <li>Material Science(Physics, chemistry , biology) and Computing</li>
           </ul>
           <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-            To get a comprehensive understanding of my Research and Work experiences, as well as
-            my Projects, please take a look at my detailed description.
+            To obtain a comprehensive understanding of my research background, professional experience, and projects, 
+            and to collaborate please contact me and specify your area of interest.
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-            Besides my professional pursuits, I have a deep passion for reading. I consider myself a true
-            bookworm and find joy in immersing myself in books, expanding my knowledge, and exploring
-            different worlds through literature. Reading is not only a hobby for me, but also a way to relax,
-            learn, and broaden my perspective. You can view some of my favorite books in the Misc. tab.
-            In addition to books, I also enjoy listening to podcasts.
+            Beyond my scholarly and professional engagements, I nurture a sustained devotion to reading. 
+            Books, for me, are not merely sources of information but enduring companions in reflection, 
+            inquiry, and intellectual enrichment. Through literature, I continually expand my perspectives and 
+            deepen my understanding of the world’s complexity. 
+            Reading thus serves as both a disciplined pursuit of knowledge and a contemplative reprieve from routine. 
+            A curated selection of my preferred works is available in the other section. 
+            I also engage regularly with intellectually rigorous podcasts that further complement my learning.
           </p>
         </div>
           </div>
