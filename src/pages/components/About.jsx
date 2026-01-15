@@ -61,7 +61,7 @@ const About = () => {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span className="text-lg">Human–AI Interaction</span>
+                  <span className="text-lg">Human–AI Interaction(HF, HRI , HCI )</span>
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
@@ -77,7 +77,7 @@ const About = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span className="text-lg">Materials Science (Physics, Chemistry, Biology) & Computing</span>
+                  <span className="text-lg">Materials Sciences, Biomedical Engineering & Computing</span>
                 </li>
               </ul>
             </div>
@@ -87,7 +87,7 @@ const About = () => {
               <p className="text-lg text-gray-700 leading-relaxed">
                 For comprehensive details regarding my research background, professional experience, and project 
                 portfolio, or to discuss potential collaborations, please contact me directly with your specific 
-                area of interest.
+                area of interest through DMs or Emails.
               </p>
             </div>
 
@@ -99,7 +99,7 @@ const About = () => {
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="leading-relaxed mb-4">
                   Beyond my scholarly and professional pursuits, I maintain a deep commitment to reading as 
-                  a foundational practice of intellectual development. Literature serves not merely as a source 
+                  a foundational practice of intellectual development. Literature/Journals  serves not merely as a source 
                   of information but as a catalyst for sustained reflection, critical inquiry, and the continual 
                   expansion of perspective.
                 </p>
