@@ -3,12 +3,12 @@ import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Experience from "./pages/components/Experience";
 import About from "./pages/components/About";
 import Education from "./pages/components/Education";
 import Resources from "./pages/components/Resources";
 import Contact from "./pages/components/Contact";
 import News from "./pages/components/News";
+import Experience from "./pages/components/Experience";
 
 
 function App() {
