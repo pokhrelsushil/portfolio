@@ -1,157 +1,97 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import React, { useState } from 'react';
+import React from "react";
 
-const Resources = () => {
-        const [currentPage, setCurrentPage] = useState(1);
-        const itemsPerPage = 5;
+const currentlyReading = [
+  { title: "How to Solve It", author: "George Pólya" },
+  { title: "Human Compatible", author: "Stuart Russell" },
+  {
+    title: "Think, Play, Do: Technology, Innovation, and Organization",
+    author: "Mark Dodgson",
+  },
+];
 
-         const readingList = [
-            {
-                  title:
-                        "Artificial Intelligence: A Modern Approach by Stuart Russell and Peter Norvig",
-            },
-            {
-                  title: "Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville",
-            },
-            {
-                  title: "Pattern Recognition and Machine Learning by Christopher M. Bishop",
-            },
-            {
-                  title: "Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto",
-            },
-      ];
+const read = [
+  {
+    title: "Agent-Based and Individual-Based Modeling: A Practical Introduction",
+    author: "Steven F. Railsback, Volker Grimm",
+  },
+  { title: "Atlas of AI", author: "Kate Crawford" },
+  { title: "Brave New World", author: "Aldous Huxley" },
+  { title: "Crime and Punishment", author: "Fyodor Dostoevsky" },
+  { title: "Discipline and Punish", author: "Michel Foucault" },
+  { title: "Evolutionary Intelligence", author: "Rolf Pfeifer, Josh Bongard" },
+  { title: "Getting to Yes", author: "Roger Fisher, William Ury" },
+];
 
-
-     const resources = [
-       {
-         date: "11/2025",
-         description:
-           "This program provides a comprehensive foundation in computing, covering key areas such as software development, database management, networking, cybersecurity, and artificial intelligence. The course emphasizes practical application, problem-solving, and industry-relevant skills.",
-       },
-       {
-         date: "05/2025",
-         description:
-           "Our paper titled A Median Perspective on Unlabeled Data for Out-of-Distribution Detection is now available on arXiv.",
-       },
-       {
-         date: "09/2025",
-         description:
-           "This program provides a comprehensive foundation in computing, covering key areas such as software development, database management, networking, cybersecurity, and artificial intelligence. The course emphasizes practical application, problem-solving, and industry-relevant skills.",
-       },
-       {
-         date: "02/2025",
-         description:
-           "This program provides a comprehensive foundation in computing, covering key areas such as software development, database management, networking, cybersecurity, and artificial intelligence. The course emphasizes practical application, problem-solving, and industry-relevant skills.",
-       },
-       {
-         date: "06/2025",
-         description:
-           "This program provides a comprehensive foundation in computing, covering key areas such as software development, database management, networking, cybersecurity, and artificial intelligence. The course emphasizes practical application, problem-solving, and industry-relevant skills.",
-       },
-       {
-         date: "02/2025",
-         description:
-           "This program provides a comprehensive foundation in computing, covering key areas such as software development, database management, networking, cybersecurity, and artificial intelligence. The course emphasizes practical application, problem-solving, and industry-relevant skills.",
-       },
-     ];
-
-  // Pagination
-  const totalPages = Math.ceil(resources.length / itemsPerPage);
-  const paginatedResources = resources.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-
-  const goToPage = (page) => setCurrentPage(page);
-  const goPrev = () => currentPage > 1 && setCurrentPage((prev) => prev - 1);
-  const goNext = () =>
-  currentPage < totalPages && setCurrentPage((prev) => prev + 1);
-
+const BookItem = ({ book }) => {
   return (
-    <section
-      id="news"
-      className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8"
-    >
-      <div className="max-w-4xl mx-auto space-y-12 md:space-y-16">
-        {/* Reading List */}
-        <div className="space-y-6 md:space-y-5">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-            Reading List
-          </h2>
-         {readingList.map((read, index) => (
-          <ul key={index} className="list-disc pl-6 space-y-4 text-base font-semibold sm:text-lg md:text-xl text-gray-800">
-            <li>
-                  {read.title} <a href="#"  target="_blank" rel="noopener noreferrer"  className="font-semibold underline text-blue-500">Read </a>
-            </li>
-          </ul>
-      ))}
-        </div>
-        
-        {/* Resources Section */}
-        <div className="space-y-6 md:space-y-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-            Resources
-          </h2>
-         {paginatedResources.map((resource, index) => (
-          <ul key={index} className="list-disc pl-6 space-y-1 text-base sm:text-lg md:text-xl text-gray-800">
-            <li>
-              <span className="font-semibold">[{resource.date}] </span>
-                  {resource.description} <a href="#"  target="_blank" rel="noopener noreferrer"  className="font-semibold underline text-blue-500">Read More </a>
-            </li>
-          </ul>
-      ))}
-        </div>
-      </div>
+    <div className="space-y-1">
+      <p className="font-medium text-gray-900">{book.title}</p>
+      <p className="text-sm text-gray-600">{book.author}</p>
+    </div>
+  );
+};
 
-       {/* Pagination Controls */}
-        {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-6 mt-8">
-            {/* Left Arrow */}
-            <button
-              onClick={goPrev}
-              disabled={currentPage === 1}
-              className={`cursor-pointer p-2.5 rounded-full transition-all duration-300 ${
-                currentPage === 1
-                  ? "bg-gray-500 dark:text-white cursor-not-allowed disabled:cursor-not-allowed"
-                  : "bg-blue-500 dark:text-white hover:bg-blue-600 hover:scale-110 shadow-md"
-              }`}
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-
-            {/* Dot Pagination */}
-            <div className="flex gap-3">
-              {Array.from({ length: totalPages }, (_, i) => (
-                <button
-                  key={i}
-                  onClick={() => goToPage(i + 1)}
-                  className={`transition-all duration-300 rounded-full ${
-                    currentPage === i + 1
-                      ? "bg-blue-400 w-5 h-3"
-                      : "bg-gray-500 w-3 h-3"
-                  }`}
-                  aria-label={`Page ${i + 1}`}
-                />
-              ))}
-            </div>
-
-            {/* Right Arrow */}
-            <button
-              onClick={goNext}
-              disabled={currentPage === totalPages}
-              className={`cursor-pointer p-2.5 rounded-full transition-all duration-300 ${
-                currentPage === totalPages
-                  ? "bg-gray-500 dark:text-white cursor-not-allowed disabled:cursor-not-allowed"
-                  : "bg-blue-500 dark:text-white hover:bg-blue-600 hover:scale-110 shadow-md"
-              }`}
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-        )}
-
+const ColumnCard = ({ title, children }) => {
+  return (
+    <section className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 space-y-5">
+      <h2 className="text-2xl font-semibold text-gray-900">{title}</h2>
+      <div className="space-y-5">{children}</div>
     </section>
   );
 };
 
-export default Resources
+const Resources = () => {
+  return (
+    <main className="min-h-screen bg-gray-50 text-black px-4 py-10 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto space-y-10">
+        {/* Header */}
+        <header className="space-y-6">
+
+          <div className="max-w-2xl space-y-3">
+            <h1 className="text-4xl font-bold text-gray-900">
+              My Reading List
+            </h1>
+            <p className="text-gray-600 leading-relaxed">
+              A personal and evolving collection of books I am currently studying
+              and those I have already completed.
+            </p>
+          </div>
+        </header>
+
+        {/* Two-column layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left column */}
+          <ColumnCard title="Currently Reading">
+            {currentlyReading.map((book, idx) => (
+              <React.Fragment key={book.title}>
+                <BookItem book={book} />
+                {idx !== currentlyReading.length - 1 && (
+                  <div className="h-px bg-gray-200" />
+                )}
+              </React.Fragment>
+            ))}
+          </ColumnCard>
+
+          {/* Right column */}
+          <ColumnCard title="Already Read">
+            {read.map((book, idx) => (
+              <React.Fragment key={book.title}>
+                <BookItem book={book} />
+                {idx !== read.length - 1 && (
+                  <div className="h-px bg-gray-200" />
+                )}
+              </React.Fragment>
+            ))}
+          </ColumnCard>
+        </div>
+
+        {/* Footer */}
+        <footer className="pt-6 text-sm text-gray-500">
+          © {new Date().getFullYear()} — Personal academic reading archive
+        </footer>
+      </div>
+    </main>
+  );
+};
+
+export default Resources;
