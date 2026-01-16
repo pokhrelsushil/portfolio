@@ -10,12 +10,12 @@ const Experience = () => {
       location: "Waterloo, ON, Canada",
       current: true,
       description:
-        "Developing principled AI agents for human-AI collaboration in autonomous vehicles and safety-critical systems using reinforcement learning(RL) and foundation models.",
+        "Developing principled AI agents for human-AI collaboration in Small Modular Reactor Control room , autonomous vehicles and safety-critical systems using reinforcement learning(RL) and foundation models.",
     },
     {
       title: "Graduate Research Assistant",
       company: "Biomedical Engineering(BME), State University of New York Binghamton University",
-      period: "2018",
+      period: "201*",
       location: "Vestal, NY, USA",
       current: false,
       description:
@@ -24,7 +24,7 @@ const Experience = () => {
     {
       title: "Erasmus Mundus Research Scholar",
       company: "Computational Quantum Theoritical Physics Laboratory, Universite Piere and Marie Curie (Sorbonne University)",
-      period: " 201n",
+      period: " 201*",
       location: "Paris, France",
       current: false,
       description:
@@ -191,7 +191,7 @@ const Experience = () => {
             <div className="flex items-center gap-3 mb-8">
               <GraduationCap className="w-8 h-8 text-gray-900" />
               <h2 className="text-3xl font-bold text-gray-900 pb-2 flex-1">
-                Teaching Assistantships
+                Teaching :
               </h2>
             </div>
             <div className="border-t-2 border-gray-300 mb-8"></div>
