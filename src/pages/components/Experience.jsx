@@ -2,7 +2,7 @@ import React from "react";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 import icon from "../../assets/logo.png";
 
-const Experiences = () => {
+const Experience = () => {
   const experienceList = [
     {
       title: "CEO",
