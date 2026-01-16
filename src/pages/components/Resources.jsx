@@ -78,7 +78,7 @@ const Resources = () => {
         {/* Three-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* LEFT: Core AI Texts */}
-          <ColumnCard title="Core AI & ML Texts">
+          <ColumnCard title="Textbooks /Emerging Tech ,AI/ML Texts">
             {coreAITexts.map((book, idx) => (
               <React.Fragment key={book.title}>
                 <BookItem book={book} />
@@ -115,8 +115,7 @@ const Resources = () => {
         </div>
 
         {/* Footer */}
-        <footer className="pt-6 text-sm text-gray-500">
-          © {new Date().getFullYear()} — Personal academic reading archive
+        <footer className="pt-6 text-sm text-gray-500"> 
         </footer>
       </div>
     </main>
