@@ -101,8 +101,8 @@ const Resources = () => {
             ))}
           </ColumnCard>
 
-          {/* RIGHT: Already Read */}
-          <ColumnCard title="Already Read">
+          {/* RIGHT: Favourite Read */}
+          <ColumnCard title="Favourite Read">
             {read.map((book, idx) => (
               <React.Fragment key={book.title}>
                 <BookItem book={book} />
