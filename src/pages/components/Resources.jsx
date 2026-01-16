@@ -1,5 +1,25 @@
 import React from "react";
 
+/* New left-side academic core list */
+const coreAITexts = [
+  {
+    title: "Artificial Intelligence: A Modern Approach",
+    author: "Stuart Russell, Peter Norvig",
+  },
+  {
+    title: "Deep Learning",
+    author: "Ian Goodfellow, Yoshua Bengio, Aaron Courville",
+  },
+  {
+    title: "Pattern Recognition and Machine Learning",
+    author: "Christopher M. Bishop",
+  },
+  {
+    title: "Reinforcement Learning: An Introduction",
+    author: "Richard S. Sutton, Andrew G. Barto",
+  },
+];
+
 const currentlyReading = [
   { title: "How to Solve It", author: "George Pólya" },
   { title: "Human Compatible", author: "Stuart Russell" },
@@ -34,7 +54,7 @@ const BookItem = ({ book }) => {
 const ColumnCard = ({ title, children }) => {
   return (
     <section className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 space-y-5">
-      <h2 className="text-2xl font-semibold text-gray-900">{title}</h2>
+      <h2 className="text-xl font-semibold text-gray-900">{title}</h2>
       <div className="space-y-5">{children}</div>
     </section>
   );
@@ -43,24 +63,33 @@ const ColumnCard = ({ title, children }) => {
 const Resources = () => {
   return (
     <main className="min-h-screen bg-gray-50 text-black px-4 py-10 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto space-y-10">
+      <div className="max-w-7xl mx-auto space-y-10">
         {/* Header */}
-        <header className="space-y-6">
-
-          <div className="max-w-2xl space-y-3">
-            <h1 className="text-4xl font-bold text-gray-900">
-              My Reading List
-            </h1>
-            <p className="text-gray-600 leading-relaxed">
-              A personal and evolving collection of books I am currently studying
-              and those I have already completed.
-            </p>
-          </div>
+        <header className="max-w-3xl space-y-3">
+          <h1 className="text-4xl font-bold text-gray-900">
+            My Reading List
+          </h1>
+          <p className="text-gray-600 leading-relaxed">
+            A personal and evolving academic record of foundational texts,
+            current readings, and completed works.
+          </p>
         </header>
 
-        {/* Two-column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left column */}
+        {/* Three-column layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* LEFT: Core AI Texts */}
+          <ColumnCard title="Core AI & ML Texts">
+            {coreAITexts.map((book, idx) => (
+              <React.Fragment key={book.title}>
+                <BookItem book={book} />
+                {idx !== coreAITexts.length - 1 && (
+                  <div className="h-px bg-gray-200" />
+                )}
+              </React.Fragment>
+            ))}
+          </ColumnCard>
+
+          {/* MIDDLE: Currently Reading */}
           <ColumnCard title="Currently Reading">
             {currentlyReading.map((book, idx) => (
               <React.Fragment key={book.title}>
@@ -72,7 +101,7 @@ const Resources = () => {
             ))}
           </ColumnCard>
 
-          {/* Right column */}
+          {/* RIGHT: Already Read */}
           <ColumnCard title="Already Read">
             {read.map((book, idx) => (
               <React.Fragment key={book.title}>

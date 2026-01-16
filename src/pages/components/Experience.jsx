@@ -6,25 +6,25 @@ const Experience = () => {
     {
       title: "Graduate Research Assistant",
       company: "Systems Design Engineering, University of Waterloo",
-      period: "September 2022 - Present",
+      period: "September  - Present",
       location: "Waterloo, ON, Canada",
       current: true,
       description:
-        "Developing principled AI agents for human-AI collaboration in autonomous vehicles and safety-critical systems using reinforcement learning and foundation models.",
+        "Developing principled AI agents for human-AI collaboration in autonomous vehicles and safety-critical systems using reinforcement learning(RL) and foundation models.",
     },
     {
       title: "Graduate Research Assistant",
-      company: "Biomedical Engineering, SUNY Binghamton University",
-      period: "August 2020 - May 2022",
+      company: "Biomedical Engineering(BME), State University of New York Binghamton University",
+      period: "2018",
       location: "Vestal, NY, USA",
       current: false,
       description:
-        "Conducted computational drug discovery research applying machine learning and cheminformatics for therapeutic candidate identification.",
+        "Conducted computational drug discovery research applying machine learning and cheminformatics for drug delivery and  therapeutic candidate identification.",
     },
     {
       title: "Erasmus Mundus Research Scholar",
-      company: "Computational Quantum Chemistry Laboratory, Sorbonne University",
-      period: "September 2017 - June 2018",
+      company: "Computational Quantum Theoritical Physics Laboratory, Universite Piere and Marie Curie (Sorbonne University)",
+      period: " 201n",
       location: "Paris, France",
       current: false,
       description:
@@ -34,10 +34,10 @@ const Experience = () => {
 
   const mentoringRole = {
     title: "Student Mentor",
-    company: "Computational Quantum Chemistry Lab, Sorbonne University",
-    period: "September 2017 - June 2018",
-    location: "Paris, France",
-    description: "Mentored undergraduate students in computational chemistry concepts, laboratory techniques, and research methodology during Erasmus Mundus exchange.",
+    company: "Indian Institute of Technology , IIT Roorkee ",
+    period: "September 2017 - Present",
+    location: "Roorkee, India",
+    description: "Mentored undergraduate students in computational  concepts, laboratory techniques, and research methodology .",
   };
 
   const teachingAssignments = [
@@ -186,7 +186,7 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Right Column - Teaching Assignments Only */}
+          {/* Right Column - Teaching  Only */}
           <div>
             <div className="flex items-center gap-3 mb-8">
               <GraduationCap className="w-8 h-8 text-gray-900" />
