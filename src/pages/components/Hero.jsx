@@ -63,8 +63,7 @@ const Hero = () => {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="#contact"
-                onClick={(e) => handleSmoothScroll(e, "contact")}
+                href="/contact"
                 className="group relative inline-flex items-center justify-center px-7 py-3.5
                            bg-gradient-to-r from-blue-600 to-blue-500
                            text-white font-semibold rounded-full
@@ -77,14 +76,13 @@ const Hero = () => {
               </a>
 
               <a
-                href="#about"
-                onClick={(e) => handleSmoothScroll(e, "about")}
+                href="/about"
                 className="inline-flex items-center justify-center px-7 py-3.5
                            border-2 border-blue-600 text-blue-600 font-semibold rounded-full
                            hover:bg-blue-600 hover:text-white
                            transition-all duration-300 text-base sm:text-lg"
               >
-                Know More
+                About Me
                 <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
               </a>
             </div>
