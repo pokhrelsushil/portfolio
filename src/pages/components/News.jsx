@@ -8,9 +8,9 @@ const News = () => {
    
      const newsList = [
        {
-         date: "11/2025",
+         date: "12/01/2025",
          description:
-           "This program provides a comprehensive foundation in computing, covering key areas such as software development, database management, networking, cybersecurity, and artificial intelligence. The course emphasizes practical application, problem-solving, and industry-relevant skills.",
+           "My ppaer entitled Computational insight into IFNAR1 gene dysfunction: Identification of deleterious nsSNPs through In-Silico mutational analysis ,goes online"
        },
        {
          date: "05/2025",
