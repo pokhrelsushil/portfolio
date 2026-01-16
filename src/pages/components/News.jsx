@@ -10,7 +10,12 @@ const News = () => {
        {
          date: "12/01/2025",
          description:
-           "My ppaer entitled Computational insight into IFNAR1 gene dysfunction: Identification of deleterious nsSNPs through In-Silico mutational analysis ,goes online"
+           "My paper entitled Computational insight into IFNAR1 gene dysfunction: Identification of deleterious nsSNPs through In-Silico mutational analysis ,goes online"
+       },
+       {
+         date: "12 /08-10 /2025",
+         description:
+           " Participated in 3 days UNIVERSITY NETWORK OF EXCELLENCE IN NUCLEAR ENGINEERING(UNENE) conference at Toronto , Pearson International Airport",
        },
        {
          date: "05/2025",
