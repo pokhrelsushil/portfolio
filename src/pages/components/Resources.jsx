@@ -179,18 +179,18 @@ const portalBlocks = [
   {
     title: "Important GitHub Repositories",
     items: [
-      { label: "Control Systems Repo (add)", url: "" },
-      { label: "Robotics Repo (add)", url: "" },
-      { label: "Optimization Repo (add)", url: "" },
-      { label: "Game Theory Repo (add)", url: "" },
-      { label: "Misc Research Tools (add)", url: "" },
+      { label: "Control Systems Repo ", url: "" },
+      { label: "Robotics Repo ", url: "" },
+      { label: "Optimization Repo ", url: "" },
+      { label: "Game Theory Repo ", url: "" },
+      { label: "Misc Research Tools ", url: "" },
     ],
   },
   {
     title: "Important Links (Portal / Notes / Courses)",
     items: [
-      { label: "University Portal (add)", url: "" },
-      { label: "Github links (add)", url: "" }, 
+      { label: "University Portal ", url: "" },
+      { label: "Github links ", url: "" }, 
     ],
   },
 ];
