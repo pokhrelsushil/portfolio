@@ -28,7 +28,7 @@ const Experience = () => {
       location: "Paris, France",
       current: false,
       description:
-        "Performed quantum chemistry calculations and computational modeling as part of fully-funded European Commission scholarship.",
+        "Performed Quantum chemistry calculations and computational modeling as part of fully-funded European Commission scholarship.",
     },
   ];
 
