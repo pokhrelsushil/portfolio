@@ -191,7 +191,7 @@ const Experience = () => {
             <div className="flex items-center gap-3 mb-8">
               <GraduationCap className="w-8 h-8 text-gray-900" />
               <h2 className="text-3xl font-bold text-gray-900 pb-2 flex-1">
-                Teaching :
+                Teaching/TA :
               </h2>
             </div>
             <div className="border-t-2 border-gray-300 mb-8"></div>

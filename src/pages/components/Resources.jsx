@@ -1,125 +1,438 @@
 import React from "react";
 
-/* New left-side academic core list */
+/* =========================
+   DATA (edit URLs as needed)
+   ========================= */
+
+/* Core AI/ML texts (left column) */
 const coreAITexts = [
   {
     title: "Artificial Intelligence: A Modern Approach",
     author: "Stuart Russell, Peter Norvig",
+    url: "",
+    note: "",
   },
   {
     title: "Deep Learning",
     author: "Ian Goodfellow, Yoshua Bengio, Aaron Courville",
+    url: "",
+    note: "",
   },
   {
     title: "Pattern Recognition and Machine Learning",
     author: "Christopher M. Bishop",
+    url: "",
+    note: "",
   },
   {
     title: "Reinforcement Learning: An Introduction",
     author: "Richard S. Sutton, Andrew G. Barto",
+    url: "",
+    note: "",
   },
 ];
 
+/* Currently Reading (middle column) */
 const currentlyReading = [
-  { title: "How to Solve It", author: "George Pólya" },
-  { title: "Human Compatible", author: "Stuart Russell" },
+  { title: "How to Solve It", author: "George Pólya", url: "", note: "" },
+  { title: "Human Compatible", author: "Stuart Russell", url: "", note: "" },
   {
     title: "Think, Play, Do: Technology, Innovation, and Organization",
     author: "Mark Dodgson",
+    url: "",
+    note: "",
   },
 ];
 
-const read = [
+/* Favourite Read (right column) */
+const favouriteRead = [
   {
     title: "Agent-Based and Individual-Based Modeling: A Practical Introduction",
     author: "Steven F. Railsback, Volker Grimm",
+    url: "",
+    note: "",
   },
-  { title: "Atlas of AI", author: "Kate Crawford" },
-  { title: "Brave New World", author: "Aldous Huxley" },
-  { title: "Crime and Punishment", author: "Fyodor Dostoevsky" },
-  { title: "Discipline and Punish", author: "Michel Foucault" },
-  { title: "Evolutionary Intelligence", author: "Rolf Pfeifer, Josh Bongard" },
-  { title: "Getting to Yes", author: "Roger Fisher, William Ury" },
+  { title: "Atlas of AI", author: "Kate Crawford", url: "", note: "" },
+  { title: "Brave New World", author: "Aldous Huxley", url: "", note: "" },
+  {
+    title: "Crime and Punishment",
+    author: "Fyodor Dostoevsky",
+    url: "",
+    note: "",
+  },
+  {
+    title: "Discipline and Punish",
+    author: "Michel Foucault",
+    url: "",
+    note: "",
+  },
+  {
+    title: "Evolutionary Intelligence",
+    author: "Rolf Pfeifer, Josh Bongard",
+    url: "",
+    note: "",
+  },
+  { title: "Getting to Yes", author: "Roger Fisher, William Ury", url: "", note: "" },
 ];
 
-const BookItem = ({ book }) => {
+/* Control Systems: Crash-Course (course names only, as requested) */
+const controlSystemsCrashCourse = [
+  {
+    course: "Analog Control Systems",
+    links: [
+      { label: "Syllabus / Portal (add)", url: "" },
+      { label: "Notes (add)", url: "" },
+      { label: "GitHub (add)", url: "" },
+    ],
+  },
+  {
+    course: "Digital Control Systems",
+    links: [
+      { label: "Syllabus / Portal (add)", url: "" },
+      { label: "Notes (add)", url: "" },
+      { label: "GitHub (add)", url: "" },
+    ],
+  },
+  {
+    course: "Digital Control Applications",
+    links: [
+      { label: "Syllabus / Portal (add)", url: "" },
+      { label: "Labs / Projects (add)", url: "" },
+      { label: "GitHub (add)", url: "" },
+    ],
+  },
+  {
+    course: "Robot Dynamics and Control",
+    links: [
+      { label: "Syllabus / Portal (add)", url: "" },
+      { label: "Simulations (add)", url: "" },
+      { label: "GitHub (add)", url: "" },
+    ],
+  },
+  {
+    course: "Multivariable Control Systems",
+    links: [
+      { label: "Syllabus / Portal (add)", url: "" },
+      { label: "Notes (add)", url: "" },
+      { label: "GitHub (add)", url: "" },
+    ],
+  },
+];
+
+/* Textbook and references (from your image) */
+const informationTheoryTextbook = [
+  {
+    title: "Elements of Information Theory (2nd ed.)",
+    author: "T. M. Cover, J. A. Thomas",
+    year: "2006",
+    publisher: "Wiley",
+    url: "https://www.wiley.com/en-us/Elements%2Bof%2BInformation%2BTheory%2C%2B2nd%2BEdition-p-9780471241959",
+    note: "Publisher page (not generally free).",
+  },
+];
+
+/* Optimization (author-hosted open text) */
+const optimizationReading = [
+  {
+    title: "Convex Optimization",
+    author: "Stephen Boyd, Lieven Vandenberghe",
+    year: "2004",
+    url: "https://stanford.edu/~boyd/cvxbook/",
+    note: "Author page with downloadable PDF.",
+  },
+];
+
+/* Game theory / multiagent items you listed */
+const gameTheoreticReading = [
+  {
+    title:
+      "Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations",
+    author: "Yoav Shoham, Kevin Leyton-Brown",
+    note: "Freely available (official site).",
+    url: "https://www.masfoundations.org/download.html",
+  },
+  {
+    title: "Algorithmic Game Theory",
+    author:
+      "Noam Nisan, Tim Roughgarden, Éva Tardos, Vijay V. Vazirani (eds.)",
+    note: "Publisher page (may require institutional access).",
+    url: "https://www.cambridge.org/core/books/algorithmic-game-theory/0092C07CA8B724E1B1BE2238DDD66B38",
+  },
+  {
+    title: "Twenty Lectures on Algorithmic Game Theory",
+    author: "Tim Roughgarden",
+    note: "Publisher page (not generally free).",
+    url: "https://www.cambridge.org/core/books/twenty-lectures-on-algorithmic-game-theory/A9D9427C8F43E7DAEF8C702755B6D72B",
+  },
+  {
+    title: "The Theory of Learning in Games",
+    author: "Drew Fudenberg, David K. Levine",
+    note: "Publisher page (not generally free).",
+    url: "https://mitpress.mit.edu/9780262061940/the-theory-of-learning-in-games/",
+  },
+  {
+    title: "Game Theory",
+    author: "(Add your preferred author/edition)",
+    note: "Optional reference — add your preferred edition and link.",
+    url: "",
+  },
+  {
+    title: "A Course in Game Theory",
+    author: "Martin J. Osborne, Ariel Rubinstein",
+    note: "Freely available on the authors’ official site (registration/login required).",
+    url: "https://books.osborne.economics.utoronto.ca/",
+  },
+];
+
+/* Portal blocks: GitHub and Links (placeholders you can fill) */
+const portalBlocks = [
+  {
+    title: "Important GitHub Repositories",
+    items: [
+      { label: "Control Systems Repo (add)", url: "" },
+      { label: "Robotics Repo (add)", url: "" },
+      { label: "Optimization Repo (add)", url: "" },
+      { label: "Game Theory Repo (add)", url: "" },
+      { label: "Misc Research Tools (add)", url: "" },
+    ],
+  },
+  {
+    title: "Important Links (Portal / Notes / Courses)",
+    items: [
+      { label: "University Portal (add)", url: "" },
+      { label: "Drive / Notes Index (add)", url: "" },
+      { label: "Reading Tracker (add)", url: "" },
+      { label: "Paper Library / Zotero (add)", url: "" },
+      { label: "Lab Wiki (add)", url: "" },
+    ],
+  },
+];
+
+/* =========================
+   UI COMPONENTS
+   ========================= */
+
+const LinkButton = ({ href, children }) => {
+  const disabled = !href || href.trim() === "";
   return (
-    <div className="space-y-1">
-      <p className="font-medium text-gray-900">{book.title}</p>
-      <p className="text-sm text-gray-600">{book.author}</p>
-    </div>
+    <a
+      href={disabled ? undefined : href}
+      target={disabled ? undefined : "_blank"}
+      rel={disabled ? undefined : "noreferrer"}
+      className={[
+        "inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-medium",
+        "border border-gray-200 shadow-sm",
+        disabled
+          ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+          : "bg-white text-gray-900 hover:bg-gray-50",
+      ].join(" ")}
+      aria-disabled={disabled}
+      onClick={(e) => {
+        if (disabled) e.preventDefault();
+      }}
+    >
+      {children}
+    </a>
   );
 };
 
-const ColumnCard = ({ title, children }) => {
+const AnchorButton = ({ href, children }) => (
+  <a
+    href={href}
+    className="inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-medium border border-gray-200 shadow-sm bg-white text-gray-900 hover:bg-gray-50"
+  >
+    {children}
+  </a>
+);
+
+const ColumnCard = ({ title, children, id }) => {
   return (
-    <section className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 space-y-5">
+    <section
+      id={id}
+      className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 space-y-5 scroll-mt-24"
+    >
       <h2 className="text-xl font-semibold text-gray-900">{title}</h2>
       <div className="space-y-5">{children}</div>
     </section>
   );
 };
 
+const BookItem = ({ item }) => {
+  return (
+    <div className="space-y-2">
+      <div className="space-y-1">
+        <p className="font-medium text-gray-900">{item.title}</p>
+        <p className="text-sm text-gray-600">{item.author}</p>
+        {item.year || item.publisher ? (
+          <p className="text-sm text-gray-500">
+            {[item.year, item.publisher].filter(Boolean).join(" · ")}
+          </p>
+        ) : null}
+        {item.note ? (
+          <p className="text-sm text-gray-500 leading-relaxed">{item.note}</p>
+        ) : null}
+      </div>
+      {"url" in item ? (
+        <div className="flex flex-wrap gap-2">
+          <LinkButton href={item.url || ""}>{item.url ? "Open link" : "Add link"}</LinkButton>
+        </div>
+      ) : null}
+    </div>
+  );
+};
+
+const Divider = () => <div className="h-px bg-gray-200" />;
+
+const CourseItem = ({ item }) => {
+  return (
+    <div className="space-y-3">
+      <p className="font-medium text-gray-900">{item.course}</p>
+      <div className="flex flex-wrap gap-2">
+        {item.links.map((l) => (
+          <LinkButton key={l.label} href={l.url}>
+            {l.url ? l.label : l.label}
+          </LinkButton>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const PortalBlock = ({ block }) => {
+  return (
+    <div className="space-y-3">
+      <p className="text-sm font-semibold text-gray-900">{block.title}</p>
+      <div className="space-y-2">
+        {block.items.map((it, idx) => (
+          <div
+            key={`${block.title}-${idx}`}
+            className="flex items-center justify-between gap-3"
+          >
+            <p className="text-sm text-gray-700">{it.label}</p>
+            <LinkButton href={it.url}>{it.url ? "Open" : "Add URL"}</LinkButton>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+/* =========================
+   PAGE
+   ========================= */
+
 const Resources = () => {
   return (
-    <main className="min-h-screen bg-gray-50 text-black px-4 py-10 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-10">
+    
+
+      <div className="max-w-7xl mx-auto space-y-10"> 
         {/* Header */}
-        <header className="max-w-3xl space-y-3">
-          <h1 className="text-4xl font-bold text-gray-900">
-            My Reading List
-          </h1>
-          <p className="text-gray-600 leading-relaxed">
-            A personal and evolving academic record of foundational texts,
-            current readings, and completed works.
-          </p>
+        <header className="max-w-5xl space-y-4">
+          <div className="space-y-2">
+            <h1 className="text-4xl font-bold text-gray-900">My Reading List</h1>
+            <p className="text-gray-600 leading-relaxed">
+              A personal, evolving academic record of foundational texts, current readings,
+              and curated references (with links), including portal blocks for GitHub and resources.
+            </p>
+          </div>
+
+          {/* Navigation buttons */}
+          <div className="flex flex-wrap gap-2 pt-2">
+            <AnchorButton href="#core-ai">Core AI / ML</AnchorButton>
+            <AnchorButton href="#currently-reading">Currently Reading</AnchorButton>
+            <AnchorButton href="#control-systems">Control Systems Crash-Course</AnchorButton>
+            <AnchorButton href="#info-theory">Information Theory</AnchorButton>
+            <AnchorButton href="#optimization">Optimization</AnchorButton>
+            <AnchorButton href="#game-theory">Game-Theoretic Reading</AnchorButton>
+            <AnchorButton href="#portal">Portal Blocks</AnchorButton>
+          </div>
         </header>
 
-        {/* Three-column layout */}
+        {/* Original three-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* LEFT: Core AI Texts */}
-          <ColumnCard title="Textbooks /Emerging Tech ,AI/ML Texts">
-            {coreAITexts.map((book, idx) => (
-              <React.Fragment key={book.title}>
-                <BookItem book={book} />
-                {idx !== coreAITexts.length - 1 && (
-                  <div className="h-px bg-gray-200" />
-                )}
+          <ColumnCard id="core-ai" title="Textbooks / Emerging Tech , AI/ML Texts">
+            {coreAITexts.map((item, idx) => (
+              <React.Fragment key={item.title}>
+                <BookItem item={item} />
+                {idx !== coreAITexts.length - 1 && <Divider />}
               </React.Fragment>
             ))}
           </ColumnCard>
 
-          {/* MIDDLE: Currently Reading */}
-          <ColumnCard title="Currently Reading">
-            {currentlyReading.map((book, idx) => (
-              <React.Fragment key={book.title}>
-                <BookItem book={book} />
-                {idx !== currentlyReading.length - 1 && (
-                  <div className="h-px bg-gray-200" />
-                )}
+          <ColumnCard id="currently-reading" title="Currently Reading">
+            {currentlyReading.map((item, idx) => (
+              <React.Fragment key={item.title}>
+                <BookItem item={item} />
+                {idx !== currentlyReading.length - 1 && <Divider />}
               </React.Fragment>
             ))}
           </ColumnCard>
 
-          {/* RIGHT: Favourite Read */}
           <ColumnCard title="Favourite Read">
-            {read.map((book, idx) => (
-              <React.Fragment key={book.title}>
-                <BookItem book={book} />
-                {idx !== read.length - 1 && (
-                  <div className="h-px bg-gray-200" />
-                )}
+            {favouriteRead.map((item, idx) => (
+              <React.Fragment key={item.title}>
+                <BookItem item={item} />
+                {idx !== favouriteRead.length - 1 && <Divider />}
               </React.Fragment>
             ))}
           </ColumnCard>
         </div>
 
-        {/* Footer */}
-        <footer className="pt-6 text-sm text-gray-500"> 
-        </footer>
-      </div>
-    </main>
-  );
-};
+        {/* Control systems crash-course block (course names only) */}
+        <ColumnCard id="control-systems" title="Control Systems: Current Crash-Course Reading">
+          <div className="space-y-6">
+            {controlSystemsCrashCourse.map((item, idx) => (
+              <React.Fragment key={item.course}>
+                <CourseItem item={item} />
+                {idx !== controlSystemsCrashCourse.length - 1 && <Divider />}
+              </React.Fragment>
+            ))}
+          </div>
+        </ColumnCard>
 
-export default Resources;
+        {/* Information theory textbook (from your posted reference) */}
+        <ColumnCard id="info-theory" title="Textbook and References: Information Theory">
+          {informationTheoryTextbook.map((item, idx) => (
+            <React.Fragment key={item.title}>
+              <BookItem item={item} />
+              {idx !== informationTheoryTextbook.length - 1 && <Divider />}
+            </React.Fragment>
+          ))}
+        </ColumnCard>
+
+        {/* Optimization reading */}
+        <ColumnCard id="optimization" title="Optimization Problems: Reading (with Links)">
+          {optimizationReading.map((item, idx) => (
+            <React.Fragment key={item.title}>
+              <BookItem item={item} />
+              {idx !== optimizationReading.length - 1 && <Divider />}
+            </React.Fragment>
+          ))}
+        </ColumnCard>
+
+                {/* Game-theoretic reading list (incl. optional references) */}
+                <ColumnCard
+                  id="game-theory"
+                  title="Game-Theoretic Reading (Multiagent, Algorithmic GT, Learning in Games)"
+                >
+                  {gameTheoreticReading.map((item, idx) => (
+                    <React.Fragment key={item.title}>
+                      <BookItem item={item} />
+                      {idx !== gameTheoreticReading.length - 1 && <Divider />}
+                    </React.Fragment>
+                  ))}
+                </ColumnCard>
+        
+                {/* Portal blocks: GitHub and Links */}
+                <ColumnCard id="portal" title="Portal Blocks">
+                  <div className="space-y-8">
+                    {portalBlocks.map((block) => (
+                      <PortalBlock key={block.title} block={block} />
+                    ))}
+                  </div>
+                </ColumnCard>
+              </div>
+            );
+        };
+        
+        export default Resources;
