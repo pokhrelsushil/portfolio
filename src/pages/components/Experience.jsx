@@ -6,7 +6,7 @@ const Experience = () => {
     {
       title: "Graduate Research Assistant",
       company: "Systems Design Engineering, University of Waterloo",
-      period: "September  - Present",
+      period: "202^* - Present",
       location: "Waterloo, ON, Canada",
       current: true,
       description:
@@ -15,7 +15,7 @@ const Experience = () => {
     {
       title: "Graduate Research Assistant",
       company: "Biomedical Engineering(BME), State University of New York Binghamton University",
-      period: "201*",
+      period: "201^*",
       location: "Vestal, NY, USA",
       current: false,
       description:
@@ -24,7 +24,7 @@ const Experience = () => {
     {
       title: "Erasmus Mundus Research Scholar",
       company: "Computational Quantum Theoritical Physics Laboratory, Universite Piere and Marie Curie (Sorbonne University)",
-      period: " 201*",
+      period: " 201^*",
       location: "Paris, France",
       current: false,
       description:
