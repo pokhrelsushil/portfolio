@@ -80,41 +80,31 @@ const controlSystemsCrashCourse = [
   {
     course: "Analog Control Systems",
     links: [
-      { label: "Syllabus / Portal (add)", url: "" },
-      { label: "Notes (add)", url: "" },
-      { label: "GitHub (add)", url: "" },
+      
     ],
   },
   {
     course: "Digital Control Systems",
     links: [
-      { label: "Syllabus / Portal (add)", url: "" },
-      { label: "Notes (add)", url: "" },
-      { label: "GitHub (add)", url: "" },
+      
     ],
   },
   {
     course: "Digital Control Applications",
     links: [
-      { label: "Syllabus / Portal (add)", url: "" },
-      { label: "Labs / Projects (add)", url: "" },
-      { label: "GitHub (add)", url: "" },
+      
     ],
   },
   {
     course: "Robot Dynamics and Control",
     links: [
-      { label: "Syllabus / Portal (add)", url: "" },
-      { label: "Simulations (add)", url: "" },
-      { label: "GitHub (add)", url: "" },
+      
     ],
   },
   {
     course: "Multivariable Control Systems",
     links: [
-      { label: "Syllabus / Portal (add)", url: "" },
-      { label: "Notes (add)", url: "" },
-      { label: "GitHub (add)", url: "" },
+      
     ],
   },
 ];
@@ -200,10 +190,7 @@ const portalBlocks = [
     title: "Important Links (Portal / Notes / Courses)",
     items: [
       { label: "University Portal (add)", url: "" },
-      { label: "Drive / Notes Index (add)", url: "" },
-      { label: "Reading Tracker (add)", url: "" },
-      { label: "Paper Library / Zotero (add)", url: "" },
-      { label: "Lab Wiki (add)", url: "" },
+      { label: "Github links (add)", url: "" }, 
     ],
   },
 ];
